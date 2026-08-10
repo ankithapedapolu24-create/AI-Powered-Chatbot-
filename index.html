@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>AI Customer Support Chatbot</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Header -->
+        <header class="header">
+
+            <div>
+                <h1>🤖 AI Support Assistant</h1>
+                <p>Customer Support Chatbot</p>
+            </div>
+
+            <a href="/history" class="history-button">
+                Chat History
+            </a>
+
+        </header>
+
+
+        <!-- Chat Area -->
+        <main class="chat-container">
+
+            <div id="chat-box" class="chat-box">
+
+                <div class="message bot-message">
+
+                    <div class="avatar">
+                        🤖
+                    </div>
+
+                    <div class="message-content">
+
+                        <strong>AI Assistant</strong>
+
+                        <p>
+                            Hello! 👋 Welcome to customer support.
+                            How can I help you today?
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Suggested Questions -->
+            <div class="suggestions">
+
+                <button onclick="sendSuggestion('How can I track my order?')">
+                    Track Order
+                </button>
+
+                <button onclick="sendSuggestion('What is your return policy?')">
+                    Return Policy
+                </button>
+
+                <button onclick="sendSuggestion('How long does shipping take?')">
+                    Shipping
+                </button>
+
+                <button onclick="sendSuggestion('How can I get a refund?')">
+                    Refund
+                </button>
+
+            </div>
+
+
+            <!-- Input Area -->
+            <div class="input-area">
+
+                <input
+                    type="text"
+                    id="message-input"
+                    placeholder="Type your question..."
+                    autocomplete="off"
+                >
+
+                <button id="send-button">
+                    Send
+                </button>
+
+            </div>
+
+        </main>
+
+
+        <footer>
+
+            <p>
+                AI Customer Support Chatbot |
+                Built with Python, Flask & SQLite
+            </p>
+
+        </footer>
+
+    </div>
+
+
+    <script src="{{ url_for('static', filename='js/script.js') }}">
+    </script>
+
+</body>
+
+</html>
